@@ -6,7 +6,7 @@ class CanvasButton(Canvas):
         self.configure(width=width, height=height, bg=color)
         self.bind("<ButtonPress-1>", self._on_press)
         self.bind("<ButtonRelease-1>", self._on_release)
-        self.create_text(width/2, height/2, text=text, font=("Arial", 44))
+        self.create_text(width/2, height/2, text=text, font=("Arial", 32))
 
     def _on_press(self, event):
         self.configure()
