@@ -18,14 +18,18 @@ def createMainMenu(parent):
 
 def createStoplightMenu(parent, callback):
     clear(parent)
-    btnRed = CanvasButton(parent, SCREEN_WIDTH/2, SCREEN_HEIGHT/2, color="red", text="Red", command=stoplightAPI.setRed)
-    btnYellow = CanvasButton(parent, SCREEN_WIDTH/2, SCREEN_HEIGHT/2, color="yellow", text="Yellow", command=stoplightAPI.setYellow)
-    btnGreen = CanvasButton(parent, SCREEN_WIDTH/2, SCREEN_HEIGHT/2, color="green", text="Green",command=stoplightAPI.setGreen)
+    btnRed = CanvasButton(parent, SCREEN_WIDTH/4, SCREEN_HEIGHT/2, color="red", text="Red", command=stoplightAPI.setRed)
+    btnYellow = CanvasButton(parent, SCREEN_WIDTH/4, SCREEN_HEIGHT/2, color="yellow", text="Yellow", command=stoplightAPI.setYellow)
+    btnGreen = CanvasButton(parent, SCREEN_WIDTH/4, SCREEN_HEIGHT/2, color="green", text="Green",command=stoplightAPI.setGreen)
+    btnCycle = CanvasButton(parent, SCREEN_WIDTH/4, SCREEN_HEIGHT/2, color="purple", text="Cycle",command=stoplightAPI.cycle)
+    btnOff = CanvasButton(parent, SCREEN_WIDTH/2, SCREEN_HEIGHT/2, color="white", text="Off",command=stoplightAPI.off)
     btnNegative = CanvasButton(parent, SCREEN_WIDTH/2, SCREEN_HEIGHT/2, color="orange", text="Back", command=lambda: callback(parent))
     btnRed.grid(row=0,column=0)
     btnYellow.grid(row=0,column=1)
-    btnGreen.grid(row=1,column=0)
-    btnNegative.grid(row=1,column=1)
+    btnGreen.grid(row=0,column=2)
+    btnCycle.grid(row=0,column=3)
+    btnOff.grid(row=1,column=0,columnspan=2)
+    btnNegative.grid(row=1,column=2,columnspan=2)
 
 def clear(parent):
     #parent.delete("all")

@@ -11,3 +11,8 @@ def setYellow():
 def setGreen():
     resp = requests.get(API_BASE_URL + '/green')
 
+def cycle():
+    resp = requests.get(API_BASE_URL + '/cycle')
+
+def off():
+    resp = requests.get(API_BASE_URL + '/off')
